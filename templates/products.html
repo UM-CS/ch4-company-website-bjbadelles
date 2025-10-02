@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Products - Company Site{% endblock %}
+{% block content %}
+<h1>Products</h1>
+<ul>
+  {% for p in products %}
+    <li>
+      <h3>{{ p.name }}</h3>
+      <p>SKU: {{ p.sku }}</p>
+      <p>${{ p.price }}</p>
+      <p>{{ p.desc }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
